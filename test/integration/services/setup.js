@@ -8,11 +8,11 @@ const config = {
   user: 'postgres',
   password: 'postgres',
   port: 5432,
-  host: 'localhost',
+  host: process.env.DB_HOST,
 };
 
 const dbConnection = {
-  host: 'localhost',
+  host: process.env.DB_HOST,
   db: 'midastest',
   user: 'midas',
   password: 'midas',

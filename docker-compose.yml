@@ -1,6 +1,9 @@
 version: '3'
 services:
   app:
+    # Uncomment the entrypoint to peek inside failing container builds.
+    # ex: docker-compose exec app bash
+    # entrypoint: ["sh", "-c", "sleep infinity"]
     build:
       dockerfile: Dockerfile
       context: .
@@ -21,7 +24,9 @@ services:
       - mail
       - backend
     environment:
-      - PATH=/app/node_modules/.bin:$PATH
+      - DB_HOST=db
+      - DB_USER=midas
+      - DB_NAME=midas
       - DATABASE_URL=postgres://midas@db/midas
       - DATASTORE=postgresql
       - LOG_LEVEL=silly
@@ -50,7 +55,6 @@ services:
       - .:/app
       - node-modules:/app/node_modules/
     environment:
-      - PATH=/app/node_modules/.bin:$PATH
       - DATABASE_URL=postgres://midas@db/midas
       - DATASTORE=postgresql
       - LOG_LEVEL=silly
@@ -80,7 +84,6 @@ services:
       - .:/app
       - node-modules:/app/node_modules/
     environment:
-      - PATH=/app/node_modules/.bin:$PATH
       - DATABASE_URL=postgres://midas@db/midas
       - DATASTORE=postgresql
       - LOG_LEVEL=silly
