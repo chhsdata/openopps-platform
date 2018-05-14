@@ -69,8 +69,9 @@ $nav_item_height: 17px + 24px;
   }
 
   &__brand {
+    font-size: 2.5rem;
     display: block;
-    padding: 1.6rem 0 1.2rem $size-default;
+    padding: 2rem 1.5rem 1.2rem $size-default;
     line-height: 1;
 
     @include media($ML) {
