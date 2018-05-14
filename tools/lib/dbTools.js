@@ -99,7 +99,7 @@ module.exports = {
         if (tagType == 'agency') {
           if (match && match.length > 1) {
             var abbr = match[1];
-            return { name: line, abbr: abbr, slug: abbr.toLowerCase(), domain: [abbr.toLowerCase() + '.gov'], allowRestrictAgency: true};
+            return { name: line, abbr: abbr, slug: abbr.toLowerCase(), domain: [abbr.toLowerCase() + 'ca.gov'], allowRestrictAgency: true};
           }
         } else if (tagType == 'series') {
           if (match && match.length > 1) {

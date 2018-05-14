@@ -50,7 +50,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    command: npm run migrate
+    command: npm run migrate:up
     volumes:
       - .:/app
       - node-modules:/app/node_modules/
@@ -96,7 +96,7 @@ services:
   db:
     networks:
       - backend
-    image: postgres:9.3
+    image: postgres:9.6
     volumes:
       - pgdata:/var/lib/postgresql/data/
     environment:

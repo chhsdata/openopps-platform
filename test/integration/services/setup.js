@@ -43,11 +43,11 @@ before(function (done) {
     db.any(data).then(() => {
       pgp.end();
       console.log('Setup complete.');
-      done();
     }).catch(err => {
       console.log('Error restoring dump file', err);
       process.exit(-1);
     });
+    done();
   });
 });
 

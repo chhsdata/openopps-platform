@@ -15,14 +15,14 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -1788,7 +1788,7 @@ INSERT INTO tagentity VALUES ('skill', 'recruiting grants management', 1106, '20
 INSERT INTO tagentity VALUES ('skill', 'R ', 1107, '2015-05-07 18:25:27-04', '2015-05-07 18:25:27-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'identity management', 1108, '2015-05-11 12:44:30-04', '2015-05-11 12:44:30-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'urban computing', 1109, '2015-05-11 12:44:30-04', '2015-05-11 12:44:30-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('topic', 'federal spending data', 1110, '2015-05-12 16:24:09-04', '2015-05-12 16:24:09-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('topic', 'California state spending data', 1110, '2015-05-12 16:24:09-04', '2015-05-12 16:24:09-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'python', 1111, '2015-05-12 16:23:06-04', '2015-05-12 16:23:06-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('location', 'College Park, Maryland', 1112, '2015-05-15 15:31:17-04', '2015-05-15 15:31:17-04', NULL, '{"lat":"38.98067","lon":"-76.93692","source":"geonames","sourceId":"4351977","gmtOffset":"-5","timeZoneId":"America/New_York","dstOffset":"-4"}');
 INSERT INTO tagentity VALUES ('skill', 'Communication', 1113, '2015-05-19 10:01:46-04', '2015-05-19 10:01:46-04', NULL, NULL);
@@ -1831,21 +1831,21 @@ INSERT INTO tagentity VALUES ('topic', 'National Institute of Standards and Tech
 INSERT INTO tagentity VALUES ('topic', 'Office of Management and Budget (OMB)', 1150, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'Federal Information Processing Standards (FIPS)', 1151, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'Federal Cyber Security Policy', 1152, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', '•	Recent (within 5 years) strong experience writing federal policy and procedures', 1153, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', '•	Recent (within 5 years) strong experience writing California state policy and procedures', 1153, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Cyber Security experience or training', 1154, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', '•	Knowledge in information and information system assurance activities as set by federal mandates. These would include but not limited to governing entities such as National Institute of Standards and Technology (NIST)', 1156, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', '•	Knowledge in information and information system assurance activities as set by California state mandates. These would include but not limited to governing entities such as National Institute of Standards and Technology (NIST)', 1156, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', '•	Ability to collaborate across the ASOC and USDA agencies to ensure research is conducted and integration of business requirements', 1155, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'CISSP or equivalent', 1157, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', '•	Strong knowledge of APA or MPA Style Guide', 1158, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', ' grammatical standards', 1159, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', '•	Must possess an background clearance of a National Agency Check with Inquiries', 1160, '2015-05-28 13:29:46-04', '2015-05-28 13:29:46-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'knowledge of information and information system assurance activities as set by federal mandates', 1161, '2015-05-29 14:29:59-04', '2015-05-29 14:29:59-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'knowledge of information and information system assurance activities as set by California state mandates', 1161, '2015-05-29 14:29:59-04', '2015-05-29 14:29:59-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Ability to collaborate', 1162, '2015-05-29 14:29:59-04', '2015-05-29 14:29:59-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Must possess a background clearance of a National Agency ', 1163, '2015-05-29 14:29:59-04', '2015-05-29 14:29:59-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'knowledge of information and information system assurance activities as set by federal mandates', 1164, '2015-06-01 10:45:24-04', '2015-06-01 10:45:24-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'knowledge of information and information system assurance activities as set by California state mandates', 1164, '2015-06-01 10:45:24-04', '2015-06-01 10:45:24-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Strong knowledge of APA or MPA style guides', 1165, '2015-06-01 10:45:24-04', '2015-06-01 10:45:24-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'Recent experience writing federal policy and procedures', 1166, '2015-06-01 11:04:56-04', '2015-06-01 11:04:56-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'Knowledge of information and information system assurance activities as set by federal mandate', 1167, '2015-06-01 11:04:56-04', '2015-06-01 11:04:56-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'Recent experience writing California state policy and procedures', 1166, '2015-06-01 11:04:56-04', '2015-06-01 11:04:56-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'Knowledge of information and information system assurance activities as set by California state mandate', 1167, '2015-06-01 11:04:56-04', '2015-06-01 11:04:56-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Experience using the APA or MPA style guide', 1168, '2015-06-01 11:04:56-04', '2015-06-01 11:04:56-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', ' testing', 1170, '2015-06-01 11:16:16-04', '2015-06-01 11:16:16-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', ' mobile', 1171, '2015-06-01 11:16:16-04', '2015-06-01 11:16:16-04', NULL, NULL);
@@ -2298,7 +2298,7 @@ INSERT INTO tagentity VALUES ('skill', 'CRM', 1615, '2015-09-09 12:39:05-04', '2
 INSERT INTO tagentity VALUES ('skill', 'Energy Analysis', 1616, '2015-09-09 12:39:05-04', '2015-09-09 12:39:05-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('location', 'Ann Arbor, Michigan', 1617, '2015-09-09 15:14:25-04', '2015-09-09 15:14:25-04', NULL, '{"lat":"42.27756","lon":"-83.74088","source":"geonames","sourceId":"4984247","dstOffset":"-4","gmtOffset":"-5","timeZoneId":"America/Detroit"}');
 INSERT INTO tagentity VALUES ('skill', 'digital preservation', 1618, '2015-09-09 15:29:52-04', '2015-09-09 15:29:52-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('topic', 'federal records', 1619, '2015-09-09 15:29:52-04', '2015-09-09 15:29:52-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('topic', 'California state records', 1619, '2015-09-09 15:29:52-04', '2015-09-09 15:29:52-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('location', 'Miami, Florida', 1620, '2015-09-15 09:08:17-04', '2015-09-15 09:08:17-04', NULL, '{"lat":"25.77427","lon":"-80.19366","source":"geonames","sourceId":"4164138","dstOffset":"-4","gmtOffset":"-5","timeZoneId":"America/New_York"}');
 INSERT INTO tagentity VALUES ('location', 'White Oak, Maryland', 1621, '2015-09-15 10:07:43-04', '2015-09-15 10:07:43-04', NULL, '{"lat":"39.03983","lon":"-76.99303","source":"geonames","sourceId":"4373449","dstOffset":"-4","gmtOffset":"-5","timeZoneId":"America/New_York"}');
 INSERT INTO tagentity VALUES ('location', 'College Park, Maryland', 1622, '2015-09-15 10:40:34-04', '2015-09-15 10:40:34-04', NULL, '{"lat":"38.98067","lon":"-76.93692","source":"geonames","sourceId":"4351977","gmtOffset":"-5","timeZoneId":"America/New_York","dstOffset":"-4"}');
@@ -3533,7 +3533,7 @@ INSERT INTO tagentity VALUES ('location', 'St. Louis, Missouri', 2844, '2016-03-
 INSERT INTO tagentity VALUES ('topic', 'workforce analysis', 2845, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'executive resources', 2846, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'competency modeling', 2847, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'federal employee viewpoint survey', 2848, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'California state employee viewpoint survey', 2848, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'succession planning', 2849, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'executive development', 2850, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'executive performance', 2851, '2016-03-08 14:50:07-05', '2016-03-08 14:50:07-05', NULL, NULL);
@@ -4029,7 +4029,7 @@ INSERT INTO tagentity VALUES ('topic', 'Online research', 3345, '2016-06-14 16:0
 INSERT INTO tagentity VALUES ('skill', 'History', 3346, '2016-06-14 16:07:15-04', '2016-06-14 16:07:15-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'I am looking to develop and hone leadership skills and well as some technical skills.', 3347, '2016-06-15 08:46:27-04', '2016-06-15 08:46:27-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'I have experience in acquisition and procurement using FAR procedures and AMS procedures at FAA', 3348, '2016-06-15 08:46:27-04', '2016-06-15 08:46:27-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'statutes principals federal laws and procedures to develop impement and promulgate directives guidance policies and instructions.', 3349, '2016-06-15 08:46:27-04', '2016-06-15 08:46:27-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'statutes principals California state laws and procedures to develop impement and promulgate directives guidance policies and instructions.', 3349, '2016-06-15 08:46:27-04', '2016-06-15 08:46:27-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'I have experience in researching Federal Acquisition Regulations', 3350, '2016-06-15 08:46:27-04', '2016-06-15 08:46:27-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'I am skilled in communicating with people both inside and outside of my organization both orally and in writing.', 3351, '2016-06-15 08:46:27-04', '2016-06-15 08:46:27-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('location', 'Yorktown, Virginia', 3352, '2016-06-15 08:58:47-04', '2016-06-15 08:58:47-04', NULL, '{"lat":"37.23876","lon":"-76.50967","source":"geonames","sourceId":"4046946","gmtOffset":"-5","timeZoneId":"America/New_York","dstOffset":"-4"}');
@@ -4655,7 +4655,7 @@ INSERT INTO tagentity VALUES ('topic', 'Veterinary Sciences', 3809, '2016-10-24 
 INSERT INTO tagentity VALUES ('location', 'Custer, South Dakota', 3810, '2016-10-24 14:24:58-04', '2016-10-24 14:24:58-04', NULL, '{"lat":"43.76665","lon":"-103.59881","source":"geonames","sourceId":"5763910","gmtOffset":"-7","timeZoneId":"America/Denver","dstOffset":"-6"}');
 INSERT INTO tagentity VALUES ('location', 'Helena, Montana', 3811, '2016-10-24 14:25:09-04', '2016-10-24 14:25:09-04', NULL, '{"lat":"46.59271","lon":"-112.03611","source":"geonames","sourceId":"5656882","gmtOffset":"-7","timeZoneId":"America/Denver","dstOffset":"-6"}');
 INSERT INTO tagentity VALUES ('skill', 'Communications/Information Officer', 3812, '2016-10-24 15:20:23-04', '2016-10-24 15:20:23-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'federal', 3813, '2016-10-24 15:20:23-04', '2016-10-24 15:20:23-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'California state', 3813, '2016-10-24 15:20:23-04', '2016-10-24 15:20:23-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('location', 'Nevada City, California', 3814, '2016-10-24 15:31:21-04', '2016-10-24 15:31:21-04', NULL, '{"lat":"39.26173","lon":"-121.01779","source":"geonames","sourceId":"5376502","gmtOffset":"-8","timeZoneId":"America/Los_Angeles","dstOffset":"-7"}');
 INSERT INTO tagentity VALUES ('topic', 'Archaeology', 3815, '2016-10-24 15:36:01-04', '2016-10-24 15:36:01-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'Cultural resources', 3816, '2016-10-24 15:36:01-04', '2016-10-24 15:36:01-04', NULL, NULL);
@@ -4823,7 +4823,7 @@ INSERT INTO tagentity VALUES ('topic', 'high-performing teams', 4004, '2016-11-2
 INSERT INTO tagentity VALUES ('skill', 'Baldrige Framework for Performance Excellence', 4005, '2016-11-28 12:40:18-05', '2016-11-28 12:40:18-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Strategy Management', 4006, '2016-11-28 12:40:18-05', '2016-11-28 12:40:18-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Effective Communications', 4007, '2016-11-28 12:40:18-05', '2016-11-28 12:40:18-05', NULL, NULL);
-INSERT INTO tagentity VALUES ('topic', 'I am seeking new and interesting opportunities that will allow me to grow my skillset in my federal service.', 4008, '2016-11-28 12:47:57-05', '2016-11-28 12:47:57-05', NULL, NULL);
+INSERT INTO tagentity VALUES ('topic', 'I am seeking new and interesting opportunities that will allow me to grow my skillset in my California state service.', 4008, '2016-11-28 12:47:57-05', '2016-11-28 12:47:57-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Program Management Masters Certificate', 4009, '2016-11-28 12:47:57-05', '2016-11-28 12:47:57-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'DAWIA II Program Management', 4010, '2016-11-29 08:22:27-05', '2016-11-29 08:22:27-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'DAWIA II Information Technology', 4011, '2016-11-29 08:22:27-05', '2016-11-29 08:22:27-05', NULL, NULL);
@@ -4992,7 +4992,7 @@ INSERT INTO tagentity VALUES ('skill', 'IT Budget and Contract Managment', 4173,
 INSERT INTO tagentity VALUES ('skill', 'Business Relationship Managment', 4174, '2016-12-23 09:32:33-05', '2016-12-23 09:32:33-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'Seeking more opportunities to assist department.', 4175, '2016-12-23 17:37:58-05', '2016-12-23 17:37:58-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'Site development', 4176, '2016-12-23 17:37:58-05', '2016-12-23 17:37:58-05', NULL, NULL);
-INSERT INTO tagentity VALUES ('topic', 'Seeking to assist federal government', 4177, '2016-12-23 17:50:51-05', '2016-12-23 17:50:51-05', NULL, NULL);
+INSERT INTO tagentity VALUES ('topic', 'Seeking to assist California state government', 4177, '2016-12-23 17:50:51-05', '2016-12-23 17:50:51-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('location', 'Washington, D.C.', 4178, '2016-12-28 08:37:27-05', '2016-12-28 08:37:27-05', NULL, '{"lat":"38.89511","lon":"-77.03637","source":"geonames","sourceId":"4140963","gmtOffset":"-5","timeZoneId":"America/New_York","dstOffset":"-4"}');
 INSERT INTO tagentity VALUES ('location', 'Bethesda, Maryland', 4179, '2016-12-28 09:46:11-05', '2016-12-28 09:46:11-05', NULL, '{"lat":"38.98067","lon":"-77.10026","source":"geonames","sourceId":"4348599","gmtOffset":"-5","timeZoneId":"America/New_York","dstOffset":"-4"}');
 INSERT INTO tagentity VALUES ('location', 'Fort Campbell North, Kentucky', 4180, '2016-12-28 11:27:26-05', '2016-12-28 11:27:26-05', NULL, '{"lat":"36.65429","lon":"-87.46056","source":"geonames","sourceId":"7259770","gmtOffset":"-6","timeZoneId":"America/Chicago","dstOffset":"-5"}');
@@ -5053,7 +5053,7 @@ INSERT INTO tagentity VALUES ('location', 'Smyrna, Tennessee', 4233, '2017-01-10
 INSERT INTO tagentity VALUES ('location', 'Suffolk, Virginia', 4234, '2017-01-11 09:04:56-05', '2017-01-11 09:04:56-05', NULL, '{"lat":"36.72836","lon":"-76.58496","source":"geonames","sourceId":"4788158","gmtOffset":"-5","timeZoneId":"America/New_York","dstOffset":"-4"}');
 INSERT INTO tagentity VALUES ('skill', 'General IT', 4235, '2017-01-11 09:07:18-05', '2017-01-11 09:07:18-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'computer hardware', 4236, '2017-01-11 09:07:18-05', '2017-01-11 09:07:18-05', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'federal policy', 4237, '2017-01-11 09:07:18-05', '2017-01-11 09:07:18-05', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'California state policy', 4237, '2017-01-11 09:07:18-05', '2017-01-11 09:07:18-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'Illustration', 4238, '2017-01-11 09:56:11-05', '2017-01-11 09:56:11-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', ' editing', 4239, '2017-01-11 09:56:11-05', '2017-01-11 09:56:11-05', NULL, NULL);
 INSERT INTO tagentity VALUES ('topic', 'nature photography', 4240, '2017-01-11 09:56:11-05', '2017-01-11 09:56:11-05', NULL, NULL);
@@ -5215,9 +5215,9 @@ INSERT INTO tagentity VALUES ('skill', 'Controlled Unclassified Information', 43
 INSERT INTO tagentity VALUES ('skill', 'briefings', 4397, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'SBU', 4398, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'executive order', 4399, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'federal rule', 4400, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'California state rule', 4400, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'CUI', 4401, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
-INSERT INTO tagentity VALUES ('skill', 'federal register', 4402, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
+INSERT INTO tagentity VALUES ('skill', 'California state register', 4402, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', '13556', 4403, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', '32 CFR Part 2002', 4404, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
 INSERT INTO tagentity VALUES ('skill', 'CSAM', 4405, '2017-04-25 17:14:11-04', '2017-04-25 17:14:11-04', NULL, NULL);
@@ -5503,18 +5503,18 @@ SELECT pg_catalog.setval('tagentity_users__user_tags_id_seq', 1, false);
 --
 
 INSERT INTO task VALUES ('open', 1, NULL, 'Who to follow on Twitter? Kids.gov wants to know!', 'Kids.gov, the official web portal for kids, is putting together a list of influencers that the site should be following and interacting with on Twitter.', 1, '2017-12-18 15:31:31.053-05', '2017-12-18 15:31:31.053-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO task VALUES ('open', 3, NULL, 'Policy Development Improvement', 'Rapid changes in the information technology environment, cybersecurity challenges, and decreasing IT budgets are resulting in higher demands for clear, well written policies and manuals.  To meet this demand increase, policy and manual developers must take full advantage of office automation tools to include the use of style sheets/style sets in order to decrease needless repetitions and errors. 
+INSERT INTO task VALUES ('open', 3, NULL, 'Policy Development Improvement', 'Rapid changes in the information technology environment, cybersecurity challenges, and decreasing IT budgets are resulting in higher demands for clear, well written policies and manuals.  To meet this demand increase, policy and manual developers must take full advantage of office automation tools to include the use of style sheets/style sets in order to decrease needless repetitions and errors.
 
 **Deliverable**
 
-The selected individual will develop USDA’s Departmental Regulation (DR) and Departmental Manual (DM) style sheets/style sets while gaining a detailed understanding of USDA’s policy development process.   
+The selected individual will develop USDA’s Departmental Regulation (DR) and Departmental Manual (DM) style sheets/style sets while gaining a detailed understanding of USDA’s policy development process.
 
 **Preparation**
 
-To prepare,  the selected individual will: 
+To prepare,  the selected individual will:
 -	meet with OCIO staff to gain an understanding of the overall departmental policy process,
 -	read the DR and DM documents that pertain to policy style rules,
--	meet with USDA policy development staff who are developing individual style sheets/style sets in order to share information and understand lessons learned, 
+-	meet with USDA policy development staff who are developing individual style sheets/style sets in order to share information and understand lessons learned,
 -	brief PE&F staff on the optimal use of style sheets/style sets given the knowledge gained above.', 3, '2017-12-18 15:31:31.054-05', '2017-12-18 15:31:31.054-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO task VALUES ('open', 10, NULL, 'Improve Global Public Diplomacy with Web Content Publishing', 'Want to be part of the highest-profile, global project at the Department of State? Want to learn more about the world and what information U.S. Embassies share with foreign publics? Want to learn or improve your WordPress skills? The State Department is modernizing the global infrastructure for all the embassy and consulate websites which are seen by more than 150 million people each year!
 
@@ -5524,7 +5524,7 @@ INSERT INTO task VALUES ('open', 8, NULL, 'Become an Innovation Ambassador', 'Co
 Help us by being an Innovation Ambassador for your agency. We need you to find and share data around innovation your organization has funded, and then connect and empower those innovators and companies by giving them access to highlight themselves on the Exchange. This could be as simple as sharing an excel data sheet on your recent challenge applicants and winners or by sending an email to them to let them know about the Exchange.
 
 ', 5, '2017-12-18 15:31:31.054-05', '2017-12-18 15:31:31.054-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO task VALUES ('open', 4, NULL, 'Is Challenge.gov ready to launch?', 'You’ll be the critical eye revieing federal challenge and prize competitions, checking links and making sure everything works. It would be helpful to have people who are not familiar with challenge and prize program to help. This is a simple way to gain experience with web software release practives or a great way to learn about this innovative program.', 2, '2017-12-18 15:31:31.054-05', '2017-12-18 15:31:31.054-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO task VALUES ('open', 4, NULL, 'Is Challenge.gov ready to launch?', 'You’ll be the critical eye revieing California state challenge and prize competitions, checking links and making sure everything works. It would be helpful to have people who are not familiar with challenge and prize program to help. This is a simple way to gain experience with web software release practives or a great way to learn about this innovative program.', 2, '2017-12-18 15:31:31.054-05', '2017-12-18 15:31:31.054-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 
 --
@@ -5683,4 +5683,3 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
-
