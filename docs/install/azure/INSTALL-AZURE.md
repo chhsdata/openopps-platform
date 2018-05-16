@@ -49,7 +49,7 @@ ssh {{VM username}}@{{VM URL/IP Address Here}}
 With any luck, you'll now see Ubuntu's command prompt. It might look something like the following.
 
 ```sh
-openopps@OpenOpportunitiesDEV:~$
+{{VM username}}@{{VM name}}:~$
 ```
 
 With most fresh Linux installations, it's important to set up non-root user accounts, permissions, etc. But it looks like Azure did all of that for us. Thank you, Azure. We can now proceed to the rest of our dark work.

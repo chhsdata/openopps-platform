@@ -44,11 +44,7 @@ Download our modified copy of [azuredeploy.json](https://raw.githubusercontent.c
 Click *Load file*.
 Select *azuredeploy.json*.
 Select *Save*.
-Fill in the following values.
-* Resource group: Pick "Use existing", then select the group in the drop-down
-* New Storage Account Name: "openoppsdiskdev"
-* Admin Username/Password: Ask Jon for credentials
-* Dns Name for Public IP: "caopenoppsdev"
+Fill in the values. Ask Jon for tips if needed.
 Select *Purchase*.
 
 Azure will attempt to build the VM based upon the template, but it will fail with the following error. It doesn't work because Extensions seem to be unavailable in Azure Government.
