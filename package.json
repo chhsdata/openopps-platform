@@ -128,6 +128,7 @@
     "docker:azure": "cross-var docker-compose -f docker-compose.yml -f docker-compose.azure.yml -p $npm_package_name up -d db migrate_db init_db app mail",
     "docker:prune-volumes": "docker volume prune",
     "docker:build": "cross-var docker-compose -p $npm_package_name build",
+    "docker:db:backup": "docker-compose exec db pg_dump -U midas -Fc midas > /home/openopps/db-backups/$(date +%Y%m%d-%H%M%S).dump",
     "watch": "node ./node_modules/npm-run-all/bin/npm-run-all --parallel watch:*",
     "watch:server": "node ./node_modules/nodemon/bin/nodemon --ignore .git/ --ignore assets/ --ignore dist/ --ignore node_modules/ app.js",
     "watch:client": "gulp",
