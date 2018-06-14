@@ -72,6 +72,41 @@ Once the database is restored, restart the app.
 docker-compose start app
 ```
 
+# Automating
+
+We can do some additional work to automate database backups within Ubuntu on Azure. This can be done by setting up a `cron` job. To do this, enter the following command.
+
+```sh
+crontab -e
+```
+
+If you're asked to choose an editor, pick what you prefer. I tend to prefer *vim*, but *nano* is a better choice for beginners. So go with *nano*. A text document will appear with instructions about how to record new cron jobs. Go to the bottom and enter the following line.
+
+```sh
+0 2 * * 1 cd /home/openopps/openopps-platform/; npm run docker:db:backup
+```
+
+This will instruct `cron` to backup the database every Sunday morning at 2:00 am. Press `Ctrl-Shift-x` to exit, then `Y` to confirm the save. If you get a request for the filename and a bunch of commands, just hit `Enter`. To confirm the change, you can view the crontab (without editing) with the next command.
+
+```sh
+crontab -l
+```
+
+# Checking
+
+Review backup history by going to the backups folder.
+
+```sh
+cd /home/openopps/db-backups
+ls -ltr
+```
+
+Make sure you go back to the project folder if you need to retry any of the commands above.
+
+```sh
+cd /home/openopps/openopps-platform
+```
+
 # Fin
 
 This should put us in an acceptable position for the pilot.
