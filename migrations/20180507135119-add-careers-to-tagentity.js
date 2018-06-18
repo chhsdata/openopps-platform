@@ -18,7 +18,7 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db, callback) {
-  var file = path.join(__dirname,  '../tools/init-tag-data/career.txt');
+  var file = path.join(__dirname,  '../tools/init-tag-data/career.yml');
   dbTools.importTagsFromFile(file, 'career').then(function () {
     callback();
   }).catch(function (err) {

@@ -1,6 +1,7 @@
 require('app-module-path').addPath('lib/');
 var _ = require('lodash');
 var fs = require('fs');
+var yaml = require('js-yaml');
 var pgp = require('pg-promise')();
 var parse = require('csv-parse/lib/sync');
 
@@ -91,22 +92,24 @@ module.exports = {
     var tags = [];
     // load tags from file
     if (fs.existsSync(tagFile)) {
-      lines = fs.readFileSync(tagFile).toString().split(/\r?\n/).filter(line => {
-        return line !== '';
-      });
-      tags = _.map(lines, function (line) {
-        var match = line.match(/\((.+)\)/);
+      var tagFileObjects = yaml.safeLoad(fs.readFileSync(tagFile).toString());
+      tags = _.map(tagFileObjects, function (item) {
         if (tagType == 'agency') {
-          if (match && match.length > 1) {
-            var abbr = match[1];
-            return { name: line, abbr: abbr, slug: abbr.toLowerCase(), domain: [abbr.toLowerCase() + 'ca.gov'], allowRestrictAgency: true};
-          }
+          return {
+            name: item.name + " (" + item.abbreviation + ")",
+            abbr: item.abbreviation,
+            slug: item.abbreviation.toLowerCase(),
+            domain: item.domain,
+            allowRestrictAgency: true
+          };
         } else if (tagType == 'series') {
-          if (match && match.length > 1) {
-            return { name: line, series: line.replace(match[0], '').trim(), title: match[1] };
-          }
+          return {
+            name: item.title + " (" + item.code + ")",
+            series: item.code,
+            title: item.title
+          };
         }
-        return { name: line };
+        return { name: item };
       });
     } else {
       var msg = "File Not Found: '" + tagFile + "'";
