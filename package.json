@@ -126,6 +126,8 @@
     "docker:tail": "cross-var docker-compose -p $npm_package_name up db migrate_db init_db app mail",
     "docker:restart": "cross-var docker-compose -p $npm_package_name restart app",
     "docker:down": "cross-var docker-compose -p $npm_package_name down",
+    "docker:stop": "cross-var docker-compose -p $npm_package_name stop",
+    "docker:build": "cross-var docker-compose -p $npm_package_name build",
     "docker:force": "cross-var docker-compose -p $npm_package_name up -d --force-recreate db migrate_db init_db app mail",
     "docker:azure": "cross-var docker-compose -f docker-compose.yml -f docker-compose.azure.yml -p $npm_package_name up -d db migrate_db init_db app mail",
     "docker:prune-volumes": "docker volume prune",
