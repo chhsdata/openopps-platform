@@ -29,6 +29,8 @@ services:
       - DB_NAME=midas
       - DATABASE_URL=postgres://midas@db/midas
       - DATASTORE=postgresql
+      - REDIS_HOST=redis_db
+      - REDIS_URL=redis://redis_db:6379
       - LOG_LEVEL=silly
       - PORT=3000
       - EMAIL_SYSTEM_ADDRESS=docker@openopps.local
@@ -40,6 +42,7 @@ services:
       - 'VCAP_APPLICATION={ "uris": [ "openopps-test.18f.gov" ] }'
     depends_on:
       - db
+      - redis_db
       - mail
       - migrate_db
       - init_db
@@ -102,9 +105,18 @@ services:
     environment:
       - POSTGRES_DB=midas
       - POSTGRES_USER=midas
+  redis_db:
+    image: redis:4.0.10
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    networks:
+      - backend
+    volumes:
+      - redis-data:/data
 volumes:
   node-modules:
   pgdata:
+  redis-data:
 networks:
   mail:
     driver: bridge
