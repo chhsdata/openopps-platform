@@ -1,7 +1,5 @@
 var AWS = require('aws-sdk');
-var cfenv = require('cfenv');
-var appEnv = cfenv.getAppEnv();
-var s3Creds = appEnv.getServiceCreds('s3-midas-assets');
+var s3Creds = null;
 
 var FS = {
   service: process.env.FILESTORE || 'local',

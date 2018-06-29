@@ -31,9 +31,10 @@
   * @return { string } - A string comprised of comma-delimited URIs for the CORS configuration.
   */
 function getOriginUris () {
-  var cfenv = require( 'cfenv' );
-  var appenv = cfenv.getAppEnv();
-  var uris = appenv.app.uris;
+  // Need to find a way to populate this array in the absense of cfenv.
+  // Where should these CORS URIs be stored?
+  // Do we even have any?
+  var uris = null;
   if ( uris ) {
     uris = uris.map( function ( uri ) {
       return 'https://' + uri;

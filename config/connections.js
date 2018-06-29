@@ -1,7 +1,5 @@
 console.log('Loading... ', __filename);
-var cfenv = require('cfenv'),
-    appEnv = cfenv.getAppEnv(),
-    dbURL = appEnv.getServiceURL('psql-openopps') || process.env.DATABASE_URL;
+var dbURL = process.env.DATABASE_URL;
 
 /**
  * Connections

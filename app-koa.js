@@ -1,6 +1,5 @@
 const log = require('log')('app-koa');
 const koa = require('koa');
-const cfenv = require('cfenv');
 const render = require('koa-ejs');
 const serve = require('koa-static');
 const path = require('path');
@@ -15,9 +14,6 @@ const md5File = require('md5-file');
 const _ = require('lodash');
 
 module.exports = (config) => {
-  // import vars from Cloud Foundry service
-  var envVars = cfenv.getAppEnv().getServiceCreds('env-openopps');
-  if (envVars) _.extend(process.env, envVars);
 
   // load configs
   global.openopps = {
