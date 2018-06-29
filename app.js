@@ -25,12 +25,6 @@ var extend = require('util')._extend,
 // Import vars from Cloud Foundry service
 if (userEnv) extend(process.env, userEnv);
 
-// If settings present, start New Relic
-if (process.env.NEW_RELIC_APP_NAME && process.env.NEW_RELIC_LICENSE_KEY) {
-  console.log('Activating New Relic: ', process.env.NEW_RELIC_APP_NAME);
-  require('newrelic');
-}
-
 // Ensure we're in the project directory, so relative paths work as expected
 // no matter where we actually lift from.
 process.chdir(__dirname);

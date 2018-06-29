@@ -9,8 +9,6 @@
     "FILESTORE": "",
     "HOST": "",
     "REDIRECT": true,
-    "NEW_RELIC_APP_NAME": "",
-    "NEW_RELIC_LICENSE_KEY": "",
     "NODE_ENV": "production",
     "NOTIFICATIONS_BCC": "",
     "NOTIFICATIONS_CC": "",
