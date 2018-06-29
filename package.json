@@ -129,6 +129,7 @@
     "docker:stop": "cross-var docker-compose -p $npm_package_name stop",
     "docker:build": "cross-var docker-compose -p $npm_package_name build",
     "docker:prune-volumes": "docker volume prune",
+    "docker:logs": "docker-compose logs -f",
     "docker:build": "cross-var docker-compose -p $npm_package_name build",
     "docker:db:backup": "docker-compose exec db pg_dump -U midas -Fc midas > /home/openopps/db-backups/$(date +%Y%m%d-%H%M%S).dump",
     "watch": "node ./node_modules/npm-run-all/bin/npm-run-all --parallel watch:*",
