@@ -25,7 +25,7 @@ module.exports = {
     // remote SMTP host
     host                : process.env.EMAIL_HOST || '',
     // true to use SSL connections
-    secure              : isSecure(),
+    secure              : false,
     // 25 (non-secure) or 465 (secure)
     port                : process.env.EMAIL_PORT || 465,
     // username and password settings for secure connections
@@ -34,7 +34,7 @@ module.exports = {
       pass              : process.env.EMAIL_PASS || '',
     },
     // ignore server support for STARTTLS (defaults to false)
-    ignoreTLS           : process.env.EMAIL_IGNORE_TLS || false,
+    // ignoreTLS           : true,
     // output client and server messages to console
     debug               : false,
     pool                : true,
@@ -42,6 +42,10 @@ module.exports = {
     maxConnections      : 5,
     // limit the count of messages to send through a single connection (defaults to 100)
     // maxMessages         :
+    // Cyphers for our TLS connections.
+    tls                 : {
+      ciphers           : 'SSLv3'
+    }
   },
 
   // system email address (from address)

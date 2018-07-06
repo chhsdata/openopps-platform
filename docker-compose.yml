@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - .:/app
+      - .:/app/
       - node-modules:/app/node_modules/
     working_dir: /app
     command:
@@ -19,9 +19,7 @@ services:
       - 3000:3000
     links:
       - db
-      - mail
     networks:
-      - mail
       - backend
     environment:
       - DB_HOST=db
@@ -39,11 +37,9 @@ services:
       - EMAIL_IGNORE_TLS=true
       - EMAIL_PORT=25
       - SAILS_SECRET=just_for_testing_yo
-      - 'VCAP_APPLICATION={ "uris": [ "openopps-test.18f.gov" ] }'
     depends_on:
       - db
       - redis_db
-      - mail
       - migrate_db
       - init_db
   # README: Migrate the database so that npm run init can write to it.
@@ -66,12 +62,6 @@ services:
       - db
     depends_on:
       - db
-  mail:
-    image: tophfr/mailcatcher
-    ports:
-      - 8025:80 # for the web UI
-    networks:
-      - mail
   # README: Initialize the database so that Sails can connect to it.
   init_db:
     networks:
@@ -84,7 +74,6 @@ services:
       - db
       - npm run init
     volumes:
-      - .:/app
       - node-modules:/app/node_modules/
     environment:
       - DATABASE_URL=postgres://midas@db/midas
@@ -105,6 +94,7 @@ services:
     environment:
       - POSTGRES_DB=midas
       - POSTGRES_USER=midas
+      - POSTGRES_PASSWORD=midas
   redis_db:
     image: redis:4.0.10
     command: ["redis-server", "--appendonly", "yes"]
@@ -118,7 +108,5 @@ volumes:
   pgdata:
   redis-data:
 networks:
-  mail:
-    driver: bridge
   backend:
     driver: bridge

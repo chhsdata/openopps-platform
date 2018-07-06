@@ -5,7 +5,8 @@ RUN apt-get update && \
 
 WORKDIR app
 
-COPY package*.json /app/
+COPY package.json /app/
+COPY tools /app/tools
 COPY tools/docker/wait-for-migrate-db-container.sh /
 
 RUN npm install
