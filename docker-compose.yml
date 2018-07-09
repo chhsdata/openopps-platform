@@ -94,7 +94,6 @@ services:
     environment:
       - POSTGRES_DB=midas
       - POSTGRES_USER=midas
-      - POSTGRES_PASSWORD=midas
   redis_db:
     image: redis:4.0.10
     command: ["redis-server", "--appendonly", "yes"]
