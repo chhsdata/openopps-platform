@@ -135,6 +135,7 @@
     "docker:azure:build": "npm run docker:azure:base -- build",
     "docker:azure:ps": "npm run docker:azure:base -- ps",
     "docker:azure:logs": "npm run docker:azure:base -- logs -f",
+    "docker:down": "cross-var docker-compose -f docker-compose.yml -f docker-compose.dev.yml -p $npm_package_name down",
     "docker:prune-volumes": "docker volume prune",
     "docker:logs": "docker-compose logs -f",
     "docker:db:backup": "docker-compose exec db pg_dump -U midas -Fc midas > /home/openopps/db-backups/$(date +%Y%m%d-%H%M%S).dump",
