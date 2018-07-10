@@ -9,9 +9,11 @@
         </div>
     </div>
     <div class="usajobs-search-filters__container usajobs-search-filters__scroll-container" id="filters-container">
+        <!--
         <a href="https://usajobs.github.io/openopps-help/opportunity/search/" class="usajobs-opop-section__help" target="_blank">
         <span class="fas fa-question-circle" title="Help"></span> Help
         </a>
+        -->
         <h3>Filters</h3>
         <h4 class="usajobs-search-filters__title">Status</h4>
         <% var numOfStates = _.filter(ui.states, function(state) { return (!state.hide || (user && user.isAdmin)) }).length; %>
