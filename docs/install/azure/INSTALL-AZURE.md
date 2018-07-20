@@ -238,7 +238,15 @@ git checkout docker-azure
 sudo npm install
 ```
 
-31. Use Docker Compose to build the Open Opps application.
+32. Since this is on Azure, you'll need to change one of our npm configuration variables to run the app in production. This is defined in the project's root-level `package.json` file, but here we're going to override it by entering the following command.
+
+```sh
+npm config set openopps-platform:environment azure
+```
+
+*See [Running with Docker](RUNNING-WITH-DOCKER.md) for more info on using `npm` configurations to affect Docker settings.*
+
+33. Use Docker Compose to build the Open Opps application.
 
 ```sh
 npm run docker:build
@@ -246,22 +254,18 @@ npm run docker:build
 
 Sit back and relax as Docker builds the app's entire environment from scratch.
 
-Wait up, why are we using *npm* to run *Docker Compose*? The answer can be found in the following file, where a number of convenient scripts have been defined for use with the *npm run* command.
-
-https://github.com/xjensen/openopps-platform/blob/docker-azure/package.json
-
-32. Run Open Opps.
+34. Run Open Opps.
 
 ```sh
-npm run docker:azure
+npm run docker:up
 ```
 
 ### Cleaning up
 
-33. Go back to the Azure Portal.
+35. Go back to the Azure Portal.
 
-34. Select the VM we created all the way back at the beginning.
+36. Select the VM we created all the way back at the beginning.
 
-35. Select *Networking*.
+37. Select *Networking*.
 
-36. Add an *Inbound Port Rule*. Change the destination port to *80* and the protocol to *TCP*. *Add* it.
+38. Add an *Inbound Port Rule*. Change the destination port to *80* and the protocol to *TCP*. *Add* it.
