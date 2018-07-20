@@ -129,7 +129,7 @@
     "docker:dev:logs": "npm run docker:dev:base -- logs -f",
     "docker:azure:base": "npm run docker:base -- -f docker-compose.azure.yml -p $npm_package_name-azure",
     "docker:azure:up": "npm run docker:azure:base -- up -d db redis_db migrate_db init_db app",
-    "docker:azure:restart": "npm run docker:azure:base -- restart app",
+    "docker:azure:restart": "npm run docker:azure:base -- restart",
     "docker:azure:down": "npm run docker:azure:base -- down",
     "docker:azure:stop": "npm run docker:azure:base -- stop",
     "docker:azure:build": "npm run docker:azure:base -- build",
