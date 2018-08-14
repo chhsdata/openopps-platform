@@ -80,10 +80,11 @@ We can do some additional work to automate database backups within Ubuntu on Azu
 crontab -e
 ```
 
-If you're asked to choose an editor, pick what you prefer. I tend to prefer *vim*, but *nano* is a better choice for beginners. So go with *nano*. A text document will appear with instructions about how to record new cron jobs. Go to the bottom and enter the following line.
+If you're asked to choose an editor, pick what you prefer. I tend to prefer *vim*, but *nano* is a better choice for beginners. So go with *nano*. A text document will appear with instructions about how to record new cron jobs. Go to the bottom and enter the following (absurdly long) line.
 
 ```sh
-0 2 * * 1 cd /home/openopps/openopps-platform/; npm run docker:db:backup
+0 2 * * 1 env DB_USER=$DB_USER DB_NAME=$DB_NAME DB_PASSWORD=$DB_PASSWORD /usr/local/bin/docker-compose -f /home/openopps/openopps-platform/docker-compose.yml -f /home/openopps/openopps-platform/docker-compose.azure.yml -p openopps-platform-azure exec -T db pg_dump -U midas -Fc midas > /home/openopps/db-backups/$(date +\%Y\%m\%d-\%H\%M\%S).dump 2>&1 | logger -t cron_db_backup
+
 ```
 
 This will instruct `cron` to backup the database every Sunday morning at 2:00 am. Press `Ctrl-Shift-x` to exit, then `Y` to confirm the save. If you get a request for the filename and a bunch of commands, just hit `Enter`. To confirm the change, you can view the crontab (without editing) with the next command.
