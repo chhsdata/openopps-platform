@@ -108,6 +108,26 @@ Make sure you go back to the project folder if you need to retry any of the comm
 cd /home/openopps/openopps-platform
 ```
 
+# Archive Uploaded Files
+
+Before we make our grand exit, we should also make sure we back up files uploaded by users. This might include profile pictures and other task artifacts. The following command performs the backup.
+
+```sh
+rsync -a /home/openopps/openopps-platform/assets/uploads/ /home/openopps/uploads-archive
+```
+
+The uploads will be archived to the following folder.
+
+```sh
+cd /home/openopps/openopps-platform
+```
+
+And we can also set this up in `cron` for automated backup. Enter the following line at the bottom of `crontab -e`, per the instructions above, to automatically archive uploads every Sunday at 2:10 am.
+
+```sh
+10 2 * * 1 rsync -a /home/openopps/openopps-platform/assets/uploads/ /home/openopps/uploads-archive
+```
+
 # Fin
 
 This should put us in an acceptable position for the pilot.
