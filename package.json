@@ -127,7 +127,7 @@
     "docker:build": "npm run docker:base -- build",
     "docker:ps": "npm run docker:base -- ps",
     "docker:exec": "npm run docker:base -- exec",
-    "docker:logs": "npm run docker:base -- logs -f",
+    "docker:logs": "npm run docker:base -- logs -f --tail 1000",
     "docker:prune-volumes": "docker volume prune",
     "docker:db:backup": "/usr/local/bin/docker-compose -f /home/openopps/openopps-platform/docker-compose.yml -f /home/openopps/openopps-platform/docker-compose.azure.yml -p openopps-platform-azure exec db pg_dump -U midas -Fc midas > /home/openopps/db-backups/$(date +%Y%m%d-%H%M%S).dump",
     "watch": "node ./node_modules/npm-run-all/bin/npm-run-all --parallel watch:*",

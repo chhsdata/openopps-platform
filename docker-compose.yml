@@ -49,6 +49,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
+    working_dir: /app
     command: npm run migrate:up
     volumes:
       - .:/app
