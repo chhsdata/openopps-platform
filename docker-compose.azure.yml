@@ -11,6 +11,7 @@ services:
       - node app.js
     environment:
       - PGPASSWORD=${DB_PASSWORD}
+      - HOST=openopps.dss.ca.gov
       - DB_HOST=db
       - DB_USER
       - DB_NAME
@@ -47,3 +48,4 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
   redis_db:
     restart: always
+    
