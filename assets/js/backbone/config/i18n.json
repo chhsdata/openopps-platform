@@ -1,7 +1,0 @@
-{
-  "lng"             : "en-US",
-  "fallbackLng"     : "en",
-  "sendMissing"     : false,
-  "sendMissingTo"   : "current",
-  "debug"           : false
-}

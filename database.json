@@ -1,9 +1,0 @@
-{
-  "dev": {
-    "driver": "pg",
-    "user": "midas",
-    "password": "midas",
-    "host": "localhost",
-    "database": "midas"
-  }
-}

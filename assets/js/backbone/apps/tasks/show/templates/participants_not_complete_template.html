@@ -1,9 +1,0 @@
-<div class="not-complete-participants">
-  <% _.each(volunteers, function (v) { %>
-    <div class="project-people-show-div" data-userid="<%- v.userId %>" data-voluserid="<%- v.userId %>">
-      <img src="/api/user/photo/<%- v.userId %>" alt="<%- v.name %>" class="project-people" />
-      <label class="project-people-show-label"><%- v.name %></label>
-    </div>
-  <% }); %>
-  <p><% if (volunteers.length > 1) { %>These participants haven't<% } else { %>This participant hasn't<% } %> completed their task and will not get credit. Do you still want to complete the opportunity?</p>
-</div>

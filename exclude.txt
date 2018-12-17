@@ -1,5 +1,0 @@
-.git/*
-LICENSE
-LICENSE.md
-README.md
-exclude.txt
