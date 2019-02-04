@@ -32,6 +32,7 @@ var BrowseRouter = Backbone.Router.extend({
     'admin(/)'                      : 'showAdmin',
     'admin(/):action(/)(:agencyId)' : 'showAdmin',
     'login(/)'                      : 'showLogin',
+    'register(/)'                   : 'showRegistration',
   },
 
   data: { saved: false },
@@ -96,6 +97,18 @@ var BrowseRouter = Backbone.Router.extend({
       el: '#container',
       router: this,
       data: this.data,
+      registration: false,
+    });
+  },
+
+  showRegistration: function () {
+    this.cleanupChildren();
+    this.loginController = new LoginController({
+      target: 'login',
+      el: '#container',
+      router: this,
+      data: this.data,
+      registration: true,
     });
   },
 

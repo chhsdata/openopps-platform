@@ -27,7 +27,13 @@ var LoginController = BaseController.extend({
     } else {
       this.options = options;
       this.cleanupViews();
-      this.renderLogin();
+      // Enriching this to allow direct routes to user registration.
+      // this.renderLogin();
+      if (this.options.registration === true) {
+        this.renderRegister();
+      } else {
+        this.renderLogin();
+      }
     }
   },
 
