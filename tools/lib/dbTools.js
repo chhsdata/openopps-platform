@@ -1,4 +1,5 @@
 require('app-module-path').addPath('lib/');
+global.openopps = {};
 var _ = require('lodash');
 var fs = require('fs');
 var yaml = require('js-yaml');
@@ -77,12 +78,14 @@ module.exports = {
   },
   importUsersFromFile: function (userFile) {
     var users = this.parseFile(userFile);
+    var register = require('../../api/auth/service').register;
     return Promise.all(users.map(async (user) => {
       return await register(user, () => { });
     }));
   },
   importTasksFromFile: function (taskFile) {
     var tasks = this.parseFile(taskFile);
+    var createOpportunity = require('../../api/opportunity/service').createOpportunity;
     return Promise.all(tasks.map(async (task) => {
       return await createOpportunity(task, () => { });
     }));

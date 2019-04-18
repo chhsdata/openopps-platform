@@ -22,7 +22,7 @@ services:
     networks:
       - backend
     environment:
-      - HOST=localhos
+      - HOST=localhost
       - DB_HOST=db
       - DB_USER=midas
       - DB_NAME=midas

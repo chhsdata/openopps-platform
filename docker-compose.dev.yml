@@ -3,6 +3,7 @@ services:
   app:
     ports:
       - 3000:3000
+      - 443:443
     links:
       - mail
     networks:

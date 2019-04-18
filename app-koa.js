@@ -145,6 +145,13 @@ module.exports = (config) => {
   app.use(feature('comment'));
   app.use(feature('document'));
 
+  const app_https = app;
+
   app.listen(openopps.port);
   console.log('App running at ' + openopps.hostName + ':' + openopps.port);
+  if (process.env.NODE_ENV == 'production') {
+    app_https.listen(443);
+    console.log('App running at ' + openopps.hostName + ':443');
+  }
+
 };
