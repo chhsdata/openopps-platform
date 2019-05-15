@@ -53,7 +53,7 @@ docker-compose start db
 If you need to delete the database for whatever reason, here's the command to do it. **Proceed with caution.**
 
 ```sh
-docker-compose exec db psql -U midas -c 'DROP DATABASE midas'
+docker-compose exec db psql -U midas -d database -c 'DROP DATABASE midas'
 ```
 
 # Restoring

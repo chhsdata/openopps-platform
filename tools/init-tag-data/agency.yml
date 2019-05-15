@@ -7,3 +7,45 @@
 - name: California Health and Human Services Agency
   abbreviation: CHHS
   domain: chhs.ca.gov
+- name: California Department of Aging
+  abbreviation: CDA
+  domain: aging.ca.gov
+- name: California Department of Child Support Services
+  abbreviation: DCSS
+  domain: childsup.ca.gov
+- name: California Department of Community Services and Development
+  abbreviation: CSD
+  domain: csd.ca.gov
+- name: California Department of Developmental Services
+  abbreviation: DDS
+  domain: dds.ca.gov
+- name: California Emergency Medical Services Authority
+  abbreviation: EMSA
+  domain: emsa.ca.gov
+- name: California Department of Health Care Services
+  abbreviation: DHCS
+  domain: dhcs.ca.gov
+- name: California Department of Managed Health Care
+  abbreviation: DMHC
+  domain: dmhc.ca.gov
+- name: California Department of Rehabilitation
+  abbreviation: DOR
+  domain: dor.ca.gov
+- name: California Department of State Hospitals
+  abbreviation: DSH
+  domain: dsh.ca.gov
+- name: California Office of Health Information Integrity
+  abbreviation: OHII
+  domain: ohi.ca.gov
+- name: California Office of Law Enforcement Support
+  abbreviation: OLES
+  domain: oles.ca.gov
+- name: California Office of Statewide Health Planning and Development
+  abbreviation: OSHPD
+  domain: oshpd.ca.gov
+- name: California Office of Systems Integration
+  abbreviation: OSI
+  domain: osi.ca.gov
+- name: California Office of the Patient Advocate
+  abbreviation: OPA
+  domain: opa.ca.gov
