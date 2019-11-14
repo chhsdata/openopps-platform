@@ -58,6 +58,7 @@ var LoginCreateView = Backbone.View.extend({
           multiple: false,
           allowCreate: false,
           blurOnChange: true,
+          placeholder: 'Start typing to select a department'
         });
       }
 
