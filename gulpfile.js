@@ -49,19 +49,22 @@ gulp.task('sass', function () {
 });
 
 // Concatenate & Minify JS
-gulp.task('scripts', function () {
+gulp.task('scripts', function (done) {
   gulp.src('assets/js/backbone/app.js')
-    .pipe(babel())
+    .pipe(babel({
+      "presets": ['@babel/preset-env']
+    }))
     .pipe(bro({ transform: stringify }))
     .pipe(rename('bundle.min.js'))
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('dist/js'));
+    done();
 });
 
 // Move additional resources
-gulp.task('move', function () {
+gulp.task('move', function (done) {
   gulp.src(['./assets/files/**'])
     .pipe(gulp.dest('dist/files'));
   gulp.src(['./assets/fonts/**'])
@@ -76,92 +79,19 @@ gulp.task('move', function () {
     .pipe(gulp.dest('dist'));
   gulp.src(['./assets/js/vendor/fontawesome-all.js'])
     .pipe(gulp.dest('dist/js'));
+  done();
 });
 
 // Watch Files For Changes
 gulp.task('watch', function () {
-  gulp.watch('assets/js/backbone/**', ['lint', 'scripts']);
-  gulp.watch('assets/js/utils/**', ['lint', 'scripts']);
-  gulp.watch('assets/styles/**', ['sass']);
+  gulp.watch('assets/js/backbone/**', gulp.series('lint', 'scripts'));
+  gulp.watch('assets/js/utils/**', gulp.series('lint', 'scripts'));
+  gulp.watch('assets/styles/**', gulp.series('sass'));
 });
 
 // Build task
-gulp.task('build', ['lint', 'sass', 'scripts', 'move']);
+gulp.task('build', gulp.series('lint', 'sass', 'scripts', 'move'));
 
-// Bump package version number
-gulp.task('bump', function () {
-  var type = versionBumps[process.argv[3]];
-  if(!type) {
-    throw new Error('When calling `gulp bump` you must specify one of these options: ' + Object.keys(versionBumps));
-  }
-  var bump = require('gulp-bump');
-  gulp.src('./package.json')
-    .pipe(bump({ type: type }))
-    .pipe(gulp.dest('./'));
-});
-
-gulp.task('bump:patch', function () {
-  var bump = require('gulp-bump');
-  gulp.src('./package.json')
-    .pipe(bump({ type: 'patch' }))
-    .pipe(gulp.dest('./'));
-});
-
-// Build an octopus release
-gulp.task('create-release', function () {
-  var octo = require('@octopusdeploy/gulp-octo');
-  var pack = gulp.src(releaseFiles)
-    .pipe(octo.pack('zip'));
-  if(process.env.OctoHost && process.env.OctoKey) {
-    return pack.pipe(octo.push({
-      host: process.env.OctoHost,
-      apiKey: process.env.OctoKey,
-      replace: true,
-    }));
-  } else {
-    return pack.pipe(gulp.dest('./bin'));
-  }
-});
-
-gulp.task('publish', ['create-release'], function () {
-  const git = require('gulp-git');
-  const octopusApi = require('octopus-deploy');
-  const simpleCreateRelease = require('octopus-deploy/lib/commands/simple-create-release');
-  const package = require('./package.json');
-  octopusApi.init({
-    host: process.env.OctoHost,
-    apiKey: process.env.OctoKey,
-  });
-  git.exec({ args: 'describe --tags --abbrev=0', maxBuffer: Infinity }, (err, tag) => {
-    if(err) { throw(err); }
-    var logCMD = 'log ' + tag.replace(/\r?\n?/g, '') + '..@ --no-merges ' +
-      '--pretty=format:"[%h](http://github.com/openopps/openopps-platform/commit/%H): %s%n"';
-    git.exec({ args: logCMD, maxBuffer: Infinity }, (err, releaseNotes) => {
-      if(err) { throw(err); }
-      const releaseParams = {
-        projectSlugOrId: 'openopps',
-        version: package.version,
-        packageVersion: package.version,
-        releaseNotes: releaseNotes,
-      };
-      simpleCreateRelease(releaseParams).then((release) => {
-        console.log('Octopus release created:', release);
-        git.exec({ args: 'add --all', maxBuffer: Infinity }, (err) => {
-          if(err) { throw(err); }
-          var commitMsg = 'commit -m "Create release package ' + package.version + '"';
-          git.exec({ args: commitMsg, maxBuffer: Infinity }, (err) => {
-            if(err) { throw(err); }
-            git.tag('v' + package.version, '', function (err) {
-              if (err) throw err;
-            });
-          });
-        });
-      }, (error) => {
-        console.log('Octopus release creation failed!', error);
-      });
-    });
-  });
-});
 
 //Default task
-gulp.task('default', ['lint', 'sass', 'scripts', 'move', 'watch']);
+gulp.task('default', gulp.series('lint', 'sass', 'scripts', 'move', 'watch'));
